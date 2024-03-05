@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int hour, minute;
+
+    // Input: Desired hour and minute
+    cout << "Enter the hour (0-23): ";
+    cin >> hour;
+    cout << "Enter the minute (0-59): ";
+    cin >> minute;
+
+    // Check the validity of input hour and minute
+    if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
+        cout << "Invalid input! Please enter valid hour (0-23) and minute (0-59)." << endl;
+    } else {
+        // Convert input hour and minute to reverse time
+        int reversed_hour = 23 - hour;
+        int reversed_minute = 59 - minute;
+
+        // Display the reverse time
+        cout << "Reversed time: " << reversed_hour << ":" << reversed_minute << endl;
+    }
+
+    return 0;
+}
